@@ -1,2 +1,25 @@
-<h1>Home#show</h1>
+<h1>Profile</h1>
 <p>Find me in app/views/home/show.html.erb</p>
+
+
+<div class="small-12 columns">
+  <table>
+   <thead>
+      <tr>
+         <th>User Name</th>
+         <th>Birthday</th>
+         <th>Gender</th>
+         <th>Email</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td><%= current_user.user_name %></td>
+         <td><%= current_user.date_of_birth %></td>
+         <td><%= current_user.gender %></td>
+         <td><%= current_user.email %></td>
+      </tr>
+   </tbody>
+  </table>
+</div>
+
