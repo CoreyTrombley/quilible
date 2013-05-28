@@ -1,2 +1,15 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
+
+
+<%= form_for("user", :url => user_session_path) do |f| %>
+  <%= f.text_field :email %>
+  <%= f.password_field :password %>
+  <%= f.submit 'Sign in' %>
+  <%= link_to "Forgot your password?", new_password_path('user') %>
+<% end %>
+
+
+<ul class="hmenu">
+  <%= render 'devise/menu/registration_items' %>
+</ul>
