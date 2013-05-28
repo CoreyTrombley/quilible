@@ -1,4 +1,6 @@
 Quilible::Application.routes.draw do
+  get "achievements/index"
+
   devise_for :users, :controllers => { :registrations => "registrations" }
 
   get "home/index"
