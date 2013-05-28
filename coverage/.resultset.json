@@ -1,0 +1,151 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Lencor/Desktop/development/quilible/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/Lencor/Desktop/development/quilible/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Lencor/Desktop/development/quilible/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Lencor/Desktop/development/quilible/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/Lencor/Desktop/development/quilible/app/models/achievement.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/Lencor/Desktop/development/quilible/app/models/comment.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/Lencor/Desktop/development/quilible/app/models/user.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/Lencor/Desktop/development/quilible/spec/features/signup_spec.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/Lencor/Desktop/development/quilible/spec/helpers/home_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/Lencor/Desktop/development/quilible/spec/models/achievement_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Lencor/Desktop/development/quilible/spec/models/comment_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/Lencor/Desktop/development/quilible/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Lencor/Desktop/development/quilible/spec/views/home/index.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/Lencor/Desktop/development/quilible/spec/views/home/show.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1369748948
+  }
+}

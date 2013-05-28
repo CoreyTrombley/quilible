@@ -13,6 +13,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'annotate'
   gem 'simplecov'
+  gem 'capybara'
 end
 
 group :test do
@@ -33,7 +34,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'devise'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
