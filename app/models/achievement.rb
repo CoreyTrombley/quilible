@@ -14,4 +14,5 @@ class Achievement < ActiveRecord::Base
   attr_accessible :description, :points, :title
 
   has_many :comments
+  has_many :pictures
 end

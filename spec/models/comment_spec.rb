@@ -18,7 +18,7 @@ describe Comment do
     expect(Comment.all.count).to eql(1)
   end
   it "should belong to a user" do
-    user = User.create!
+    user = User.create!(:email => Faker::Internet.email, :password => "password")
     comment = Comment.create!(:user_id => 1)
     expect(comment.user.id).to eql(1)
   end

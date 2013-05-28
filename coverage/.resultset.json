@@ -108,39 +108,6 @@
         1,
         null
       ],
-      "/Users/Lencor/Desktop/development/quilible/spec/features/signup_spec.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/Users/Lencor/Desktop/development/quilible/spec/helpers/home_helper_spec.rb": [
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null
-      ],
       "/Users/Lencor/Desktop/development/quilible/spec/models/achievement_spec.rb": [
         null,
         null,
@@ -185,8 +152,8 @@
         null,
         1,
         1,
-        0,
-        0,
+        1,
+        1,
         null,
         1,
         1,
@@ -226,34 +193,20 @@
         1,
         1,
         1,
-        0,
-        null,
-        null,
         1,
-        1,
-        1,
-        0,
         null,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/Users/Lencor/Desktop/development/quilible/spec/views/home/index.html.erb_spec.rb": [
-        1,
         null,
         1,
         1,
-        null
-      ],
-      "/Users/Lencor/Desktop/development/quilible/spec/views/home/show.html.erb_spec.rb": [
+        1,
         1,
         null,
         1,
-        1,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1369751366
+    "timestamp": 1369753569
   }
 }

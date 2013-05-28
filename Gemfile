@@ -14,10 +14,10 @@ group :development, :test do
   gem 'annotate'
   gem 'simplecov'
   gem 'capybara'
+  gem 'database_cleaner'
 end
 
 group :test do
-  gem 'database_cleaner'
   gem 'faker'
 end
 
