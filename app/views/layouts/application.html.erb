@@ -21,19 +21,16 @@
   </head>
 
   <body>
-    <div>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <%= render 'layouts/nav' %>
+    <div class="row">
+      <div class="small-12 columns">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+      <div class="small-12 centered columns">
+        <%= yield %>
+      </div>
     </div>
-    <div>
-    <ul class="hmenu">
-      <%= render 'devise/menu/registration_items' %>
-      <%= render 'devise/menu/login_items' %>
-    </ul>
-    </div>
-    <%= yield %>
-
-    
     <%= javascript_include_tag "application" %>
   </body>
 </html>
