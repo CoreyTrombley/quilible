@@ -9,11 +9,15 @@ gem 'rails', '3.2.13'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
-  gem "database_cleaner"
   gem 'pry-rails'
   gem 'better_errors'
   gem 'annotate'
   gem 'simplecov'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'faker'
 end
 
 # Gems used only for assets and not required
