@@ -1,3 +1,22 @@
 // Place all the styles related to the achievements controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.achievement_box {
+  border: 1px solid gray;
+  display: inline-block;
+  padding: 10px;
+  overflow: hidden;
+  p {
+    text-align: center;
+  }
+  p.label {
+    transform:rotate(37deg);
+    -webkit-transform:rotate(39deg);
+    position: relative;
+    bottom: 90px;
+    left: 35px;
+    width: 100px;
+  }
+}

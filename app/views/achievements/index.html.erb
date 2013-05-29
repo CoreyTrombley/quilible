@@ -21,3 +21,15 @@
     <% end %>
   </tbody>
 </table>
+
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <% @achievements.each do |achievement| %>
+    <div class="achievement_box">
+      <p><%= achievement.title %></p>
+      <p><%= achievement.description %></p>
+      <p class="label right"><%= achievement.points %></p>
+    </div>
+    <% end %>
+  </div>
+</div>
