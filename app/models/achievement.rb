@@ -15,4 +15,9 @@ class Achievement < ActiveRecord::Base
 
   has_many :comments
   has_many :pictures
+
+  @achievements = []
+  def self.group(item)
+    @achievements << item
+  end
 end

@@ -2,33 +2,14 @@
 <p>Find me in app/views/achievements/index.html.erb</p>
 
 
-<table>
-  <thead>
-    <caption>Achievemenets</caption>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Points</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @achievements.each do |achievement| %>
-      <tr>
-        <td><%= achievement.title %></td>
-        <td><%= achievement.description %></td>
-        <td><%= achievement.points %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
 <div class="row">
   <div class="small-12 large-12 columns">
     <% @achievements.each do |achievement| %>
-    <div class="achievement_box">
+    <div class="achievement_box small-3 large-3 colums">
       <p><%= achievement.title %></p>
       <p><%= achievement.description %></p>
       <p class="label right"><%= achievement.points %></p>
+      <%= link_to "Complete Achievement", achievements_path, :class => "button" %>
     </div>
     <% end %>
   </div>

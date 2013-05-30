@@ -11,6 +11,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'annotate'
   gem 'simplecov'
   gem 'capybara'
@@ -35,6 +36,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'thin'
 gem 'zurb-foundation'
+gem 'carrierwave'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
