@@ -9,7 +9,7 @@
       <p><%= achievement.title %></p>
       <p><%= achievement.description %></p>
       <p class="label right"><%= achievement.points %></p>
-      <%= link_to "Complete Achievement", achievements_path, :class => "button" %>
+      <%= link_to "Complete Achievement", achievement_path(achievement), :class => "button" %>
     </div>
     <% end %>
   </div>

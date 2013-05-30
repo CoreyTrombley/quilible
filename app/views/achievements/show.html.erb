@@ -1,0 +1,21 @@
+Hello
+
+<%= @achievement.title %><br>
+<%= @achievement.description %><br>
+<%= @achievement.points %>
+
+<% @achievement.pictures.each do |picture| %>
+  <div class="picture_box">
+    <%= image_tag picture.url %>
+  </div>
+<% end %>
+
+<%= form_for(@achievement, :url=>{:action=>'update'}, :html => {:multipart => true}) do |f| %>
+  <%= f.fields_for :picture do |p| %>
+    <%= p.text_field :title %>
+    <%= p.file_field :url %>
+    <%= p.hidden_field :user_id, current_user.id %>
+    <%= p.hidden_field :achievement_id, @achievement.id %>
+  <% end %>
+    <%= f.submit "Submit" %>
+<% end %>

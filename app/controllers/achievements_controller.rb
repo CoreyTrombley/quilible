@@ -4,4 +4,8 @@ class AchievementsController < ApplicationController
       @achievements = Achievement.group(achievement)
     end
   end
+
+  def show
+    @achievement = Achievement.find(params[:id])
+  end
 end

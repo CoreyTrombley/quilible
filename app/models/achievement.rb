@@ -20,4 +20,7 @@ class Achievement < ActiveRecord::Base
   def self.group(item)
     @achievements << item
   end
+
+
+  accepts_nested_attributes_for :pictures
 end
