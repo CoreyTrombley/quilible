@@ -1,25 +1,36 @@
 <h1>Profile</h1>
 <p>Find me in app/views/home/show.html.erb</p>
 
+<!-- <table>
+<thead>
+   <tr>
+      <th>User Name</th>
+      <th>Birthday</th>
+      <th>Gender</th>
+      <th>Email</th>
+      <th>Score</th>
+   </tr>
+</thead>
+<tbody>
+   <tr>
+      <td><%= current_user.user_name %></td>
+      <td><%= current_user.date_of_birth %></td>
+      <td><%= current_user.gender %></td>
+      <td><%= current_user.email %></td>
+      <td><%= current_user.score %></td>
+   </tr>
+</tbody>
+</table> -->
 
-<div class="small-12 columns">
-  <table>
-   <thead>
-      <tr>
-         <th>User Name</th>
-         <th>Birthday</th>
-         <th>Gender</th>
-         <th>Email</th>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-         <td><%= current_user.user_name %></td>
-         <td><%= current_user.date_of_birth %></td>
-         <td><%= current_user.gender %></td>
-         <td><%= current_user.email %></td>
-      </tr>
-   </tbody>
-  </table>
+<div class="row">
+   <div class="small-6 large-6 centered columns">
+      <h4>User Name</h4>
+      <p><%= current_user.user_name %></p>
+   </div>
+   <div class="small-6 large-6 centered columns">
+      <div class= "point_box">
+      <h4>Points</h4>
+      <b><%= current_user.score %></b>
+      </div>
+   </div>
 </div>
-

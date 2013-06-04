@@ -1,11 +1,12 @@
 Quilible::Application.routes.draw do
 
   devise_for :users, :controllers => { :registrations => "registrations" }
-
-  match '/achievements', :to => 'achievements#index'
-  match '/achievements/:id', :to => 'achievements#show', :as => 'achievement'
   match '/profile', :to => 'home#show'
-
+  resources :achievements do
+    resources :pictures do
+      resources :comments
+    end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

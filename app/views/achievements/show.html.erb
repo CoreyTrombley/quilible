@@ -1,21 +1,32 @@
-Hello
 
+<div class="small-10 large-12 columns">
 <%= @achievement.title %><br>
 <%= @achievement.description %><br>
 <%= @achievement.points %>
 
-<% @achievement.pictures.each do |picture| %>
-  <div class="picture_box">
-    <%= image_tag picture.url %>
-  </div>
-<% end %>
-
-<%= form_for(@achievement, :url=>{:action=>'update'}, :html => {:multipart => true}) do |f| %>
-  <%= f.fields_for :picture do |p| %>
-    <%= p.text_field :title %>
-    <%= p.file_field :url %>
-    <%= p.hidden_field :user_id, current_user.id %>
-    <%= p.hidden_field :achievement_id, @achievement.id %>
+<%= form_for(@achievement, :html => {:multipart => true}) do |f| %>
+  <%= f.fields_for :pictures do |p| %>
+   <%if p.object.new_record?%>
+    <%= p.file_field :url, :class => "small button" %>
+    <%= p.hidden_field :user_id, :value =>current_user.id %>
+    <%= p.hidden_field :achievement_id, :value => @achievement.id %>
+    <%end%>
   <% end %>
-    <%= f.submit "Submit" %>
+    <%= f.submit "Submit", :class => "small button" %>
 <% end %>
+</div>
+
+<div class="small-12 large-12 columns">
+  <% @achievement.pictures.each do |picture| %>
+    <%if !picture.new_record?%>
+      <div class="achievement_box">
+        <%= link_to(image_tag(picture.url), achievement_picture_path(picture.achievement_id, picture)) %>
+        <% if picture.comments.count > 1 || picture.comments.count == 0 %>
+        <%= link_to "#{picture.comments.count} comments", achievement_picture_path(picture.achievement_id, picture) %>
+        <% else %>
+          <%= link_to "#{picture.comments.count} comment", achievement_picture_path(picture.achievement_id, picture) %>
+        <% end %>
+      </div>
+    <%end%>
+  <% end %>
+</div>

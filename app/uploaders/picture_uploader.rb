@@ -24,7 +24,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   def default_url
     # For Rails 3.1+ asset pipeline compatibility:
     # asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
-    "http://placehold.it/500x500text=No+Picture+Added"
+    "http://placehold.it/500x500&text=No+Picture+Added"
     # "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   end
 

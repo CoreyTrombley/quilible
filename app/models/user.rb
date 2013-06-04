@@ -33,4 +33,6 @@ class User < ActiveRecord::Base
 
   has_many :comments
   has_many :pictures
+  has_many :achievements, :through => :pictures
+
 end

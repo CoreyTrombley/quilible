@@ -1,15 +1,16 @@
-<h1>Achievements#index</h1>
-<p>Find me in app/views/achievements/index.html.erb</p>
-
-
 <div class="row">
   <div class="small-12 large-12 columns">
+    <h1>Achievements</h1>
     <% @achievements.each do |achievement| %>
-    <div class="achievement_box small-3 large-3 colums">
+    <div class="achievement_box small-8 centered large-3 colums">
       <p><%= achievement.title %></p>
       <p><%= achievement.description %></p>
       <p class="label right"><%= achievement.points %></p>
-      <%= link_to "Complete Achievement", achievement_path(achievement), :class => "button" %>
+      <% if achievement != current_user.achievements.find_by_id(achievement.id) %>
+      <%= link_to "Complete Achievement", achievement_path(achievement), :class => "small button" %>
+      <% else %>
+        <%= link_to "Completed", achievement_path(achievement), :class => "small label" %>
+      <% end %>
     </div>
     <% end %>
   </div>

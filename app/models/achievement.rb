@@ -11,16 +11,15 @@
 #
 
 class Achievement < ActiveRecord::Base
-  attr_accessible :description, :points, :title
+  attr_accessible :description, :points, :title, :pictures_attributes
 
-  has_many :comments
+  has_many :comments, :through => :pictures
   has_many :pictures
 
   @achievements = []
   def self.group(item)
     @achievements << item
   end
-
 
   accepts_nested_attributes_for :pictures
 end
