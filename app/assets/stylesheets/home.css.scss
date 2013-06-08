@@ -26,5 +26,9 @@ div.point_box {
 }
 
 .homepage {
-  background: url();
+  background: url("womanphoto.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
