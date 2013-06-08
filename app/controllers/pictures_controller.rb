@@ -9,7 +9,7 @@ class PicturesController < ApplicationController
     
     respond_to do |format|
       if @picture.save!
-        format.html  { redirect_to(achievemnt_picture_path(@picture.achievement_id, @picture),
+        format.html  { redirect_to(achievement_picture_path(@picture.achievement_id, @picture),
                       :notice => 'picture was successfully created.') }
         format.json  { render :json => @picture,
                       :status => :created, :location => @picture }
@@ -25,7 +25,7 @@ class PicturesController < ApplicationController
 
     respond_to do |format|
       if @picture.update_attributes(params[:picture])
-        format.html  { redirect_to(achievemnt_picture_path(@picture.achievement_id, @picture),
+        format.html  { redirect_to(achievement_picture_path(@picture.achievement_id, @picture),
                       :notice => 'picture was successfully created.') }
         format.json  { render :json => @picture,
                       :status => :created, :location => @picture }
