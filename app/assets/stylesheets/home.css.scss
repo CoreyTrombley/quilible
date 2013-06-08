@@ -24,11 +24,17 @@ div.point_box {
     color: white;
   }
 }
-
 .homepage {
   background: url("womanphoto.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  div.splash_page {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid gray;
+    box-shadow: 0 0 15px inset;
+  }
 }
