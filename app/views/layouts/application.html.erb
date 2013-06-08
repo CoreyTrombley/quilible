@@ -20,7 +20,7 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+  <body <%=  @home_page  ? 'homepage' : ''%>>
     <%= render 'layouts/nav' %>
     <div class="row">
       <div class="small-12 columns">
