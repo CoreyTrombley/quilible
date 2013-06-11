@@ -1,6 +1,10 @@
 Quilible::Application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   devise_for :users, :controllers => { :registrations => "registrations" }
+  ActiveAdmin.routes(self)
   match '/profile', :to => 'home#show'
   resources :achievements do
     resources :pictures do
