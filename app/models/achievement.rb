@@ -16,10 +16,5 @@ class Achievement < ActiveRecord::Base
   has_many :comments, :through => :pictures
   has_many :pictures
 
-  @achievements = []
-  def self.group(item)
-    @achievements << item
-  end
-
   accepts_nested_attributes_for :pictures
 end

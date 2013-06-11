@@ -22,11 +22,11 @@ describe Comment do
     comment = Comment.create!(:user_id => 1)
     expect(comment.user.id).to eql(1)
   end
-  describe "should belong to an Achievement" do
-    it "should have an association" do
-      Achievement.create!
-      comment = Comment.create!(:achievement_id => 1)
-      expect(comment.achievement.id).to eql(1)
+  describe "should belong to a picture" do
+    it " and should be associated to the picture" do
+      picture = Picture.create!
+      comment = Comment.create!(:picture_id => 1)
+      expect(picture.comments.count).to eql(1)
     end
   end
 

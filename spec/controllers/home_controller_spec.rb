@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe HomeController do
-
   describe "GET 'index'" do
     it "returns http success" do
       get 'index'
@@ -9,10 +8,10 @@ describe HomeController do
     end
   end
 
-  describe "GET 'show'" do
-    it "returns http success" do
-      get 'show'
-      response.should be_success
+  describe "GET '/profile'" do
+    it "should require a login" do
+      visit("/profile")
+      page.has_content? "You need to sign in or sign up before continuing."
     end
   end
 
