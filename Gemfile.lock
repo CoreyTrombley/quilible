@@ -217,6 +217,7 @@ DEPENDENCIES
   devise
   faker
   jquery-rails
+  meta_search (>= 1.1.0.pre)
   pg
   pry-rails
   rails (= 3.2.13)

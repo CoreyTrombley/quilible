@@ -20,23 +20,26 @@
 #  last_sign_in_ip        :string(255)
 #
 
-class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
 
-  # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
-  attr_accessible :date_of_birth, :gender, :user_name, :email, :password, :password_confirmation
-
-  has_many :comments
-  has_many :pictures
-  has_many :achievements, :through => :pictures
-
-  # for active admin display
-  def to_s
-    self.user_name
+ActiveAdmin.register User do
+  menu :priority => 3
+  index do
+    column :user_name
+    column :email
+    column :date_of_birth
+    column :gender
+    column :sign_in_count
+    column :current_sign_in_ip
+    default_actions
   end
+
+  form do |f|
+    f.inputs "User Details" do 
+      f.input :user_name
+      f.input :email
+      f.input :password
+      f.input :password_confirmation
+    end
+    f.actions
+  end  
 end
