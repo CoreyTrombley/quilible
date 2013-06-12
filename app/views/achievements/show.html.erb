@@ -7,7 +7,7 @@
 <%= form_for(@achievement, :html => {:multipart => true}) do |f| %>
   <%= f.fields_for :pictures do |p| %>
    <%if p.object.new_record?%>
-    <%= p.file_field :url, :class => "small button" %>
+    <%= p.file_field :url,:accept => "image/*;capture=camera", :class => "small button" %>
     <%= p.hidden_field :user_id, :value =>current_user.id %>
     <%= p.hidden_field :achievement_id, :value => @achievement.id %>
     <%end%>
@@ -34,4 +34,7 @@
       </div>
     <%end%>
   <% end %>
+  <video autoplay></video>
+  <img src="">
+  <canvas style="display:none;"></canvas>
 </div>
