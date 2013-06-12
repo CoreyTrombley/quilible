@@ -1,21 +1,22 @@
+config/fog_credentials.yml
+pkg
+.yardoc
+_yardoc
 tmp
+.config
+# YARD artifacts
 spec/reports
-/db/*.sqlite3
-/tmp
-/public/uploads
 *.gem
 InstalledFiles
 *.rbc
-.config
 rdoc
-test/version_tmp
 lib/bundler/man
 .bundle
-/log/*.log
-pkg
 coverage
-.yardoc
-# YARD artifacts
+/public/uploads
+/tmp
+/db/*.sqlite3
+test/version_tmp
+/log/*.log
 test/tmp
-_yardoc
 doc/
