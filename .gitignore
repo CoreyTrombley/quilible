@@ -2,7 +2,7 @@
 
 /log/*.log
 /tmp
-/public/uploads
+/public/uploads/*
 
 *.gem
 *.rbc
