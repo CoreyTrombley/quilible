@@ -24,6 +24,7 @@
 ActiveAdmin.register User do
   menu :priority => 3
   index do
+    selectable_column
     column :user_name
     column :email
     column :date_of_birth

@@ -1,6 +1,7 @@
 ActiveAdmin.register Picture do
   menu :priority => 4
   index do
+    selectable_column
     column :user
     column :achievement
     column :title

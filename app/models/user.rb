@@ -32,9 +32,9 @@ class User < ActiveRecord::Base
   attr_accessible :date_of_birth, :gender, :user_name, :email, :password, :password_confirmation
 
   has_many :comments
-  has_many :pictures
+  has_many :pictures, :dependent => :destroy
   has_many :achievements, :through => :pictures
-  has_many :friendships
+  has_many :friendships, :dependent => :destroy
   has_many :friends, :through => :friendships
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
   has_many :inverse_friends, :through => :inverse_friendships, :source => :user
