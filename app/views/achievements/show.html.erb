@@ -22,7 +22,9 @@
       <div class="achievement_box">
         <%= link_to(image_tag(picture.url), achievement_picture_path(picture.achievement_id, picture)) %>
         Completed by <%= picture.user.user_name %>
-        <%= link_to "Follow" %>
+        <% if !current_user.friends.include? picture.user %>
+          <%= link_to "Follow", friendships_path(:friend_id => picture.user), :method => :post, :class => "tiny button" %>
+        <% end %>
         <br>
         <% if picture.comments.count > 1 || picture.comments.count == 0 %>
         <%= link_to "#{picture.comments.count} comments", achievement_picture_path(picture.achievement_id, picture) %>

@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <p>Welcome to all of your pictures</p>
+    <% @pictures.each do |picture| %>
+      <div class="achievement_box">
+        <%= link_to(image_tag(picture.url), achievement_picture_path(picture.achievement_id, picture)) %>
+        <br>
+        <% if picture.comments.count > 1 || picture.comments.count == 0 %>
+        <%= link_to "#{picture.comments.count} comments", achievement_picture_path(picture.achievement_id, picture) %>
+        <% else %>
+          <%= link_to "#{picture.comments.count} comment", achievement_picture_path(picture.achievement_id, picture) %>
+        <% end %>
+      </div>
+    <%end%>
+  </div>
+</div>

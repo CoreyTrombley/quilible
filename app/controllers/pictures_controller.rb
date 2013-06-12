@@ -1,4 +1,7 @@
 class PicturesController < ApplicationController
+  def index
+    @pictures = current_user.pictures
+  end
   def show
     @picture = Picture.find(params[:id])
     @comments = @picture.comments
