@@ -26,6 +26,7 @@ ActiveAdmin.register User do
   index do
     selectable_column
     column :user_name
+    column :score
     column :email
     column :date_of_birth
     column :gender
